@@ -1,35 +1,159 @@
-
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html >
   <head>
-    <meta charset="utf-8" />
-    <title>bayes_models package &#8212; Bayesian Scikit Learn  documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to Bayesian Scikit Learn’s documentation!" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>bayes_models package</title>
+    
+      <link rel="stylesheet" href="_static/pygments.css">
+      <link rel="stylesheet" href="_static/theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
 
-  </head><body>
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+
+      
+      <script src="_static/theme-vendors.js"></script>
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="Welcome to Bayesian Scikit Learn’s documentation!" href="index.html" /> 
+  </head>
+
+  <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Bayesian Scikit Learn</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-bayesian-scikit-learn-s-documentation"
+         class="nav-link ">
+         Contents:
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#bayes-models"
+         class="nav-link  router-link-active">
+         Welcome to Bayesian Scikit Learn’s documentation!
+      </a>
+    </div>
   
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
           
+          <navlinks>
+            
 
-          <div class="body" role="main">
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-bayesian-scikit-learn-s-documentation"
+         class="nav-link ">
+         Contents:
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#bayes-models"
+         class="nav-link  router-link-active">
+         Welcome to Bayesian Scikit Learn’s documentation!
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-bayesian-scikit-learn-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#bayes-models">Welcome to Bayesian Scikit Learn’s documentation!</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">bayes_models package</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#submodules" class="reference internal">Submodules</a></li>
+                
+                  <li class="toctree-l2"><a href="#module-bayes_models.model" class="reference internal">bayes_models.model module</a></li>
+                
+                  <li class="toctree-l2"><a href="#module-bayes_models" class="reference internal">Module contents</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>bayes_models package</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Bayesian Scikit Learn’s documentation!</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
             
   <div class="section" id="bayes-models-package">
 <h1>bayes_models package<a class="headerlink" href="#bayes-models-package" title="Permalink to this headline">¶</a></h1>
@@ -284,74 +408,19 @@
 
 
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Bayesian Scikit Learn</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">bayes_models package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bayes_models.model">bayes_models.model module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bayes_models">Module contents</a></li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Bayesian Scikit Learn’s documentation!</a></li>
-  </ul></li>
-</ul>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Bayesian Scikit Learn’s documentation!</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Edward Turner.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2019, Edward Turner.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/bayes_models.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+            </div>
+          </div>
+      </page>
+  </div></body>
 </html>
