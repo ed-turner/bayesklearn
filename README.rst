@@ -1,8 +1,3 @@
-Welcome to Bayesian Sci-kit-Learn
-=================================
-
-A package to create models using a bayesian approach. 
-
 Introduction
 ------------
 
@@ -33,7 +28,6 @@ TODO
 Documentation
 -------------
 
-For code documentations, please go here(https://ed-turner.github.io/bayesklearn/).
+For code documentations, please go `here <https://ed-turner.github.io/bayesklearn/>`_.
 
-Or have a look at the code repository(https://github.com/ed-turner/bayesklearn).
-
+Or have a look at the code `repository <https://github.com/ed-turner/bayesklearn>`_.
