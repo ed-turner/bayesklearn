@@ -28,7 +28,7 @@ TODO
 
 ## Documentation
 
-For code documentations, please go here(https://ed-turner.github.io/bayesklearn/).
+For code documentations, please go here[https://ed-turner.github.io/bayesklearn/].
 
-Or have a look at the code repository(https://github.com/ed-turner/bayesklearn).
+Or have a look at the code repository[https://github.com/ed-turner/bayesklearn].
 
