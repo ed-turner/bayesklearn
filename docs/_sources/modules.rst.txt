@@ -1,0 +1,7 @@
+bayes_models
+============
+
+.. toctree::
+   :maxdepth: 4
+
+   bayes_models

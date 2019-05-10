@@ -1,0 +1,22 @@
+bayes\_models package
+=====================
+
+Submodules
+----------
+
+bayes\_models.model module
+--------------------------
+
+.. automodule:: bayes_models.model
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bayes_models
+    :members:
+    :undoc-members:
+    :show-inheritance:

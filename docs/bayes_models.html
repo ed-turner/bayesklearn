@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>bayes_models package &#8212; Bayesian Scikit Learn  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Bayesian Scikit Learn’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="bayes-models-package">
+<h1>bayes_models package<a class="headerlink" href="#bayes-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bayes_models.model">
+<span id="bayes-models-model-module"></span><h2>bayes_models.model module<a class="headerlink" href="#module-bayes_models.model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bayes_models.model.AssembleClassificationModelCode">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">AssembleClassificationModelCode</code><a class="headerlink" href="#bayes_models.model.AssembleClassificationModelCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.AssembleRegressionModelCode">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">AssembleRegressionModelCode</code><a class="headerlink" href="#bayes_models.model.AssembleRegressionModelCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.BGLClassifier">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGLClassifier</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleClassificationModelCode" title="bayes_models.model.AssembleClassificationModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleClassificationModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dl class="method">
+<dt id="bayes_models.model.BGLClassifier.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGLClassifier.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGLClassifier.predict_proba">
+<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGLClassifier.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_val</strong> – </p></li>
+<li><p><strong>y_val</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.BGLRegressor">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGLRegressor</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleRegressionModelCode" title="bayes_models.model.AssembleRegressionModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleRegressionModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dl class="method">
+<dt id="bayes_models.model.BGLRegressor.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGLRegressor.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGLRegressor.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_val</strong> – </p></li>
+<li><p><strong>y_val</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.BGRFClassifier">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGRFClassifier</code><span class="sig-paren">(</span><em>train_cols</em>, <em>target_col</em>, <em>n_estimators</em>, <em>max_depth</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleClassificationModelCode" title="bayes_models.model.AssembleClassificationModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleClassificationModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dl class="method">
+<dt id="bayes_models.model.BGRFClassifier.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGRFClassifier.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGRFClassifier.predict_proba">
+<code class="descname">predict_proba</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGRFClassifier.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_val</strong> – </p></li>
+<li><p><strong>y_val</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.BGRFRegressor">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGRFRegressor</code><span class="sig-paren">(</span><em>train_cols</em>, <em>target_col</em>, <em>n_estimators</em>, <em>max_depth</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleRegressionModelCode" title="bayes_models.model.AssembleRegressionModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleRegressionModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dl class="method">
+<dt id="bayes_models.model.BGRFRegressor.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGRFRegressor.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>test_df</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.BGRFRegressor.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_val</strong> – </p></li>
+<li><p><strong>y_val</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bayes_models.model.SSModelBase">
+<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">SSModelBase</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bayes_models.model.SSModelBase.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bayes_models.model.SSModelBase.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bayes_models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bayes_models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Bayesian Scikit Learn</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">bayes_models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bayes_models.model">bayes_models.model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bayes_models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Bayesian Scikit Learn’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Edward Turner.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/bayes_models.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
