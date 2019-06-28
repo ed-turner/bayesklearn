@@ -155,13 +155,34 @@ Although this is the best thing to do in that particular case, it may be advanta
 to enforce a distribution of the coefficients, thereby regularizing the coefficients. The
 bayesian methodology also allows categorical feature weights and intercepts.</p>
 </div>
-<div class="section" id="implementation">
-<h1>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h1>
-<p>TODO</p>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>One method of installing the python package, whether in a virtual environment
+or your own local machine, is to git clone the repo, change the directory
+to the python-package directory, and run <cite>python setup.py install</cite>.</p>
 </div>
 <div class="section" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
-<p>TODO</p>
+<p>To use this model, simply follow this short example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bayes_models.model</span> <span class="kn">import</span> <span class="n">BGLRegressor</span>
+
+<span class="n">model_params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s2">&quot;numeric_cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span>
+<span class="s2">&quot;target_col&quot;</span><span class="p">:</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span>
+<span class="s2">&quot;cat_cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;cat_col_1&quot;</span><span class="p">,</span> <span class="s2">&quot;cat_col_2&quot;</span><span class="p">]</span>
+               <span class="p">}</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">BGLRegressor</span><span class="p">(</span><span class="o">**</span><span class="n">model_params</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_df</span><span class="p">)</span>
+
+<span class="n">test_labels</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+                        <span class="n">test_df</span>
+                        <span class="p">)</span>
+</pre></div>
+</div>
+<p>As a note, it is suggested that all missing values are taken cared off before
+using the model.</p>
 </div>
 <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>

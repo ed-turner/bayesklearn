@@ -163,30 +163,21 @@
 <div class="section" id="module-bayes_models.model">
 <span id="bayes-models-model-module"></span><h2>bayes_models.model module<a class="headerlink" href="#module-bayes_models.model" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="bayes_models.model.AssembleClassificationModelCode">
-<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">AssembleClassificationModelCode</code><a class="headerlink" href="#bayes_models.model.AssembleClassificationModelCode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="class">
-<dt id="bayes_models.model.AssembleRegressionModelCode">
-<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">AssembleRegressionModelCode</code><a class="headerlink" href="#bayes_models.model.AssembleRegressionModelCode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="class">
 <dt id="bayes_models.model.BGLClassifier">
 <em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGLClassifier</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleClassificationModelCode" title="bayes_models.model.AssembleClassificationModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleClassificationModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._AssembleClassificationModelCode</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._SSModelBase</span></code></p>
+<p>This class is responsible for performing Bayesian-Gaussian Logistic Regression, which treats categorical variables
+correctly.</p>
 <dl class="method">
 <dt id="bayes_models.model.BGLClassifier.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.fit" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This method is responsible for fitting the model onto the data</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>df</strong> – </p>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Our dataset with our features and predictive columns</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>self</p>
 </dd>
 </dl>
 </dd></dl>
@@ -194,12 +185,13 @@
 <dl class="method">
 <dt id="bayes_models.model.BGLClassifier.predict">
 <code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.predict" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the binary values of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -207,12 +199,13 @@
 <dl class="method">
 <dt id="bayes_models.model.BGLClassifier.predict_proba">
 <code class="descname">predict_proba</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the raw probabilities of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -220,11 +213,12 @@
 <dl class="method">
 <dt id="bayes_models.model.BGLClassifier.score">
 <code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLClassifier.score" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This returns the accuracy of the predictions</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_val</strong> – </p></li>
-<li><p><strong>y_val</strong> – </p></li>
+<li><p><strong>x_val</strong> (<em>pandas.DataFrame</em>) – The validation dataset</p></li>
+<li><p><strong>y_val</strong> (<em>numpy.array</em><em> or </em><em>pandas.DataFrame</em>) – The validation actual values</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -238,21 +232,33 @@
 <dl class="class">
 <dt id="bayes_models.model.BGLRegressor">
 <em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGLRegressor</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleRegressionModelCode" title="bayes_models.model.AssembleRegressionModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleRegressionModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._AssembleRegressionModelCode</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._SSModelBase</span></code></p>
+<p>This class is responsible for performing Bayesian-Gaussian Linear Regression, which treats categorical variables
+correctly.</p>
 <dl class="method">
 <dt id="bayes_models.model.BGLRegressor.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.fit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This method is responsible for fitting the model onto the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Our dataset with our features and predictive columns</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="bayes_models.model.BGLRegressor.predict">
 <code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.predict" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the raw values of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -260,15 +266,16 @@
 <dl class="method">
 <dt id="bayes_models.model.BGLRegressor.score">
 <code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGLRegressor.score" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The score returned is the R2 Score between the predicted and the actual.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_val</strong> – </p></li>
-<li><p><strong>y_val</strong> – </p></li>
+<li><p><strong>x_val</strong> (<em>pandas.DataFrame</em>) – The validation dataset</p></li>
+<li><p><strong>y_val</strong> (<em>numpy.array</em><em> or </em><em>pandas.DataFrame</em>) – The validation actual values</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>R2 Score of Predictions</p>
 </dd>
 </dl>
 </dd></dl>
@@ -278,16 +285,21 @@
 <dl class="class">
 <dt id="bayes_models.model.BGRFClassifier">
 <em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGRFClassifier</code><span class="sig-paren">(</span><em>train_cols</em>, <em>target_col</em>, <em>n_estimators</em>, <em>max_depth</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleClassificationModelCode" title="bayes_models.model.AssembleClassificationModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleClassificationModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._AssembleClassificationModelCode</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._SSModelBase</span></code></p>
+<p>This class is responsible for performing Bayesian-Gaussian Logistic Regression on the predictions of the Decision Trees
+from the fitted sklearn.ensemble.RandomForestClassifier model.  This helps us optimally derive the best weighting
+based on the predictions of the individual Decision Trees.</p>
 <dl class="method">
 <dt id="bayes_models.model.BGRFClassifier.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.fit" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>First, we will fit the RandomForest on our dataset.
+Then we will use those predictions as features for our Bayesian Model</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>df</strong> – </p>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Our dataset with our features and predictive columns</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>self</p>
 </dd>
 </dl>
 </dd></dl>
@@ -295,12 +307,13 @@
 <dl class="method">
 <dt id="bayes_models.model.BGRFClassifier.predict">
 <code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.predict" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the binary values of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -308,12 +321,13 @@
 <dl class="method">
 <dt id="bayes_models.model.BGRFClassifier.predict_proba">
 <code class="descname">predict_proba</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.predict_proba" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the raw values of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -321,11 +335,12 @@
 <dl class="method">
 <dt id="bayes_models.model.BGRFClassifier.score">
 <code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFClassifier.score" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This returns the accuracy of the predictions</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_val</strong> – </p></li>
-<li><p><strong>y_val</strong> – </p></li>
+<li><p><strong>x_val</strong> (<em>pandas.DataFrame</em>) – The validation dataset</p></li>
+<li><p><strong>y_val</strong> (<em>numpy.array</em><em> or </em><em>pandas.DataFrame</em>) – The validation actual values</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -339,16 +354,21 @@
 <dl class="class">
 <dt id="bayes_models.model.BGRFRegressor">
 <em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">BGRFRegressor</code><span class="sig-paren">(</span><em>train_cols</em>, <em>target_col</em>, <em>n_estimators</em>, <em>max_depth</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bayes_models.model.AssembleRegressionModelCode" title="bayes_models.model.AssembleRegressionModelCode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.AssembleRegressionModelCode</span></code></a>, <a class="reference internal" href="#bayes_models.model.SSModelBase" title="bayes_models.model.SSModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model.SSModelBase</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._AssembleRegressionModelCode</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bayes_models.model._SSModelBase</span></code></p>
+<p>This class is responsible for performing Bayesian-Gaussian Linear Regression on the predictions of the Decision Trees
+from the fitted sklearn.ensemble.RandomForestRegressor model.  This helps us optimally derive the best weighting
+based on the predictions of the individual Decision Trees.</p>
 <dl class="method">
 <dt id="bayes_models.model.BGRFRegressor.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.fit" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>First, we will fit the RandomForest on our dataset.
+Then we will use those predictions as features for our Bayesian Model</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>df</strong> – </p>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas.DataFrame</em>) – Our dataset with our features and predictive columns</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>self</p>
 </dd>
 </dl>
 </dd></dl>
@@ -356,12 +376,13 @@
 <dl class="method">
 <dt id="bayes_models.model.BGRFRegressor.predict">
 <code class="descname">predict</code><span class="sig-paren">(</span><em>test_df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.predict" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This predicts the raw values of our test dataframe</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>test_df</strong> – </p>
+<dd class="field-odd"><p><strong>test_df</strong> (<em>pandas.DataFrame</em>) – The dataset we will predict on.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>res</p>
 </dd>
 </dl>
 </dd></dl>
@@ -369,11 +390,12 @@
 <dl class="method">
 <dt id="bayes_models.model.BGRFRegressor.score">
 <code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.BGRFRegressor.score" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The score returned is the R2 Score between the predicted and the actual.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_val</strong> – </p></li>
-<li><p><strong>y_val</strong> – </p></li>
+<li><p><strong>x_val</strong> (<em>pandas.DataFrame</em>) – The validation dataset</p></li>
+<li><p><strong>y_val</strong> (<em>numpy.array</em><em> or </em><em>pandas.DataFrame</em>) – The validation actual values</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -381,22 +403,6 @@
 </dd>
 </dl>
 </dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="bayes_models.model.SSModelBase">
-<em class="property">class </em><code class="descclassname">bayes_models.model.</code><code class="descname">SSModelBase</code><span class="sig-paren">(</span><em>numeric_cols</em>, <em>target_col</em>, <em>cat_cols</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="method">
-<dt id="bayes_models.model.SSModelBase.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase.fit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="bayes_models.model.SSModelBase.score">
-<code class="descname">score</code><span class="sig-paren">(</span><em>x_val</em>, <em>y_val</em><span class="sig-paren">)</span><a class="headerlink" href="#bayes_models.model.SSModelBase.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
