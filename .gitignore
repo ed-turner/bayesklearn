@@ -4,3 +4,5 @@ bayes_models/__pycache__/*
 .venv/*
 
 .idea/*
+
+sphinx-docs/*
