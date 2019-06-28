@@ -15,15 +15,38 @@ Although this is the best thing to do in that particular case, it may be advanta
 to enforce a distribution of the coefficients, thereby regularizing the coefficients. The
 bayesian methodology also allows categorical feature weights and intercepts.
 
-Implementation
+Installation
 --------------
 
-TODO
+One method of installing the python package, whether in a virtual environment
+or your own local machine, is to git clone the repo, change the directory
+to the python-package directory, and run `python setup.py install`.
 
 Tutorial
 --------
 
-TODO
+To use this model, simply follow this short example
+
+.. code-block:: python
+
+  from bayes_models.model import BGLRegressor
+
+  model_params = {
+  "numeric_cols": ["x"],
+  "target_col": "y",
+  "cat_cols": ["cat_col_1", "cat_col_2"]
+                 }
+
+  model = BGLRegressor(**model_params)
+
+  model.fit(train_df)
+
+  test_labels = model.predict(
+                          test_df
+                          )
+
+As a note, it is suggested that all missing values are taken cared off before
+using the model.
 
 Documentation
 -------------
